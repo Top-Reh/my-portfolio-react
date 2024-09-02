@@ -1,0 +1,54 @@
+.containerdice {
+    width: 530px;
+    height: 500px;
+    background-color: aqua;
+    border-radius: 12px;
+}
+
+.numbers {
+    margin-left: 27px;
+    display: grid;
+    gap: 10px;
+    grid-template: auto auto / repeat(5,1fr);
+}
+
+.theh1 {
+    margin: 27px;
+    padding-top: 30px;
+}
+
+.numbers h1 {
+    border: 1px solid black;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(255, 0, 0);
+}
+
+.containerdice button {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.btndiv {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    color: black;
+}

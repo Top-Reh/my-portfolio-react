@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 157, 255);
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.allaboutpf {
+    width: 100vw;
+}
+
+a {
+    color: rgb(0, 136, 255);
+    font-size: 25px;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 20px;
+    padding: 5px;
+    border-bottom: 2px solid rgb(0, 153, 255);
+    cursor: pointer;
+}
+
+button {
+    background-color: blue;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    background: transparent;
+    justify-content: space-between;
+    position: fixed;
+    padding-bottom: 20px;
+}
+
+.searching {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    right: 7px;
+    border-radius: 19px;
+    padding-right: 60px;
+}
+
+.inputiconsearch {
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hivid {
+    background: transparent;
+    width: 0;
+    height: 42px;
+    position: absolute;
+    border-radius: 17px;
+    z-index: 2;
+    left: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    overflow: hidden;
+}
+
+.hivid img {
+    width: 50px;
+    height: 100%;
+    border: none;
+}
+
+.funnygif {
+    width: 16px;
+    height: 25px;
+    background-color: white;
+}
+
+.navbar .hoverbtn {
+    margin: auto 12px;
+    background-color: blue;
+    border-radius: 40%;
+    z-index: 200;
+}
+
+.navbar  i {
+    font-size: 20px;
+}
+
+.menuunderline {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(0, 213, 255);
+}
+
+.profiliobody {
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profiliobody .profiliodiv {
+    height: 80%;
+    width: 30%;
+    background: transparent;
+    border-radius: 12px;
+    border: 1px solid blue;
+    margin-top: 5%;
+}
+
+.myPhoto {
+    color: white;
+    background-image: url('https://i.pinimg.com/736x/b5/ad/b5/b5adb55e1c58465b022337fff441d446.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 30%;
+    background: transparent;
+    margin-top: 5%;
+}
+
+.myPhoto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.about {
+    color: blue;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.about h2, p ,.btncontact {
+    margin-top: 42px;
+}
+
+.btncontact  a {
+    border: none;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+
+.about p{
+    color: blue;
+    font-size: 25px;
+    margin: 80px 0;
+    border: 1px solid blue;
+    padding:50px 0;
+}
+
+.about .btncontact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.about .btncontact button {
+    width: 70%;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80%;
+    width: 30%;
+    background: transparent;
+    margin-top: 5%;
+}
+
+.socials p{
+    color: blue;
+    font-size: 25px;
+    border: 1px solid blue;
+    padding:40px 30px;
+    margin-bottom: 0;
+}
+
+.socials .line {
+    width: 3px;
+    height: 25%;
+    background-color: blue;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.socials i {
+    font-size: 25px;
+    color: rgb(0, 76, 255);
+}
+
+.moreaboutpf {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 6, 12);
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: blue;
+}
+
+.titletextabout {
+    border-top: 1px solid blue;
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+    height: 40px;
+    color: blue;
+    padding: 0 20px 20px 20px;
+    margin-top: 0;
+    width: 80%;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+
+.textabout {
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+    border-bottom: 1px solid blue;
+    margin: 0;
+    padding-top: 0;
+    color: blue;
+    padding: 0 20px 20px 20px;
+    margin-top: 0;
+    width: 80%;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.titilebeauty {
+    display: flex;
+    width: 90%;
+    margin-right: 9.7%;
+    margin-bottom: 0;
+    padding: 0;
+    justify-content: end;
+}
+
+.moreaboutpf p .spacetext {
+    width: 230px;
+    height: 100px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 10px 20px 10px;
+}
+
+.skilldiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skillicons {
+    width: 250px;
+    height: 170px;
+    color: blue;
+    margin: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skillicons img {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.skilljs {
+    width: 100%;
+    height: 100%;
+}
+
+.skillhtml {
+    width: 500px;
+    height: 300px;
+}
+
+.skillcss {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    filter: blur();
+}
+
+.skilljs {
+    overflow: hidden;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/887/817/276/html-5-html-5-logo-wallpaper-preview.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.did {
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 70px;
+}
+
+.didBlogs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60%;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.mydids {
+    height: 100%;
+    width: 30%;
+    border: 1px solid blue;
+    border-radius: 12px;
+    margin: 12px;
+}
+
+.did button {
+    width: 200px;
+    height: 60px;
+    margin-bottom: 0;
+    font-size: 23px;
+}
+
+.contactme {
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 70px;
+}
+
+.locationAndEmail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+    width: 50%;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location h2 {
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 251, 255);
+}
+
+.locationAndEmail .email {
+    width: 90%;
+    height: 70%;
+    border: 1px solid blue;
+    margin: 12px;
+    border-radius: 12px;
+}
+
+.location p {
+    color: rgb(0, 213, 255);
+    border: 1px solid blue;
+    padding: 30px;
+    margin-top: 10px;
+    border-radius: 9px;
+    border-top-left-radius: 0;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.email h5 {
+    width: 60%;
+    color: rgb(0, 251, 255);
+}
+
+.email input , textarea{
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 30, 255);
+    background: transparent;
+    color: rgb(0, 251, 255);
+}
+
+.email input , textarea  :active {
+    border: 1px solid blue;
+}
+
+.email textarea {
+    margin: 5px;
+    height: 100px;
+    padding-left: 9px;
+}
+
+.photo {
+    width: 30%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.socialicons {
+    border: none;
+    margin: 0;
+    padding: 0;
+}

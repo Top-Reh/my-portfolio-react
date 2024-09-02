@@ -1,0 +1,153 @@
+
+.the-container{
+    height: 500px;
+    width: 700px;
+    background-color: rgb(61, 66, 129);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    position: absolute;
+}
+
+.the-show {
+    width: 40%;
+    height: 70%;
+    border-radius: 12px;
+    font-family: 'Arial';
+    background-image: url('https://images.pexels.com/videos/5189815/clouds-holiday-ocean-view-sky-5189815.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+}
+
+.the-facts {
+    width: 40%;
+    height: 60%;
+    background-color: rgb(22, 28, 59);
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-family: 'Arial';
+    padding: 12px;
+    padding-left: 19px;
+    padding-right: 10px;
+    position: relative;
+}
+
+.top-text,.bottm-text{
+    width: 80%;
+    height: 30%;
+    margin: 20px;
+}
+
+.bottm-text {
+    margin-top: 20%;
+}
+
+h3 ,h4 , h5{
+    margin: 0;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.top-text h5 {
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 4px;
+}
+
+.the-facts h3 {
+    margin: 9px;
+    margin-left: 0;
+    font-size: 20px;
+    display: flex;
+    position: relative;
+}
+
+.the-facts span {
+    position: absolute;
+    right: 0;
+}
+
+.bottm-text i {
+    font-size: 50px;
+}
+
+.weekly-conditions {
+    display: flex;
+    width: 97%;
+    height: 100px;
+    margin: 20px;
+    margin-left: 0px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.daily {
+    height: 100%;
+    width: 27%;
+    background-color: rgb(40, 38, 63);
+    border-radius: 5px;
+    border: 1px solid rgb(21, 21, 21);
+    font-size: 13px;
+}
+
+.weekly-conditions :hover {
+    background-color: rgb(93, 92, 92);
+}
+
+
+.daily img {
+    width: 40px;
+    margin-left: 9px;
+}
+
+.daily p {
+    margin: 1px;
+    color: white;
+}
+
+.change-location {
+    width: 97%;
+    height: 35px;
+    border-radius: 6px;
+    color: white;
+    background-color: rgb(120, 120, 212);
+    border: none;
+    position: relative;
+}
+
+.change-location i {
+    margin-right: 12px;
+}
+
+.the-show i {
+    margin-right: 5px;
+}
+
+.input-location {
+    width: 0;
+    height: 35px;
+    border-radius: 6px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: none;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.inputButton {
+    position: absolute;
+    left: 76%;
+    border: none;
+    height: 34px;
+    width: 49px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: rgb(196, 255, 255);
+    display: none;
+    transition:1s;
+}

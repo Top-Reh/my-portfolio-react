@@ -1,0 +1,55 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+};
+
+.container {
+    width: 900px;
+    height: 600px;
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parents {
+    width: 400px;
+    height: 250px;
+    background-color: aqua;
+    padding: 12px;
+}
+
+.searchbar {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 70%;
+    height: 30px;
+    border: none;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    font-size: 16px;
+}
+
+button {
+    width: 28%;
+    height: 30px;
+    border: 2px solid black;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    margin-left: 4px;
+    background-color: rgb(183, 138, 138);
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}

@@ -1,0 +1,428 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.menu {
+    width: 100vw;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.menu input {
+    width: 70%;
+    height: 50px;
+    border-radius: 40px;
+    background-color: rgb(235, 235, 235);
+    border: none;
+    margin: 0;
+}
+
+.menu button {
+    width: 80px;
+    height: 50px;
+    margin: 0;
+    border-radius: 25px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu .createbtn {
+}
+
+.menu i {
+    font-size: 25px;
+    margin: 2px;
+    color: grey;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.menu i:hover {
+    background-color: rgb(217, 217, 217);
+}
+
+.menu .downarrow {
+    font-size: 15px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+}
+
+.menu .pincls {
+    color: red;
+}
+
+.menu .profileT {
+    background-color: rgb(224, 223, 223);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.home , .homeblogs  {
+    color: black;
+    background-color: rgb(226, 226, 226);
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    padding: 2px 20px 2px 20px;
+}
+
+.imggrid {
+    flex: 1;
+    padding-top: 75px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto; 
+    justify-content: center;
+}
+
+.userchoice {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    grid-row-end: span 30; /* Default row span */
+    overflow: hidden;
+    border-radius: 8px;
+    color: black;
+    position: relative;
+}
+
+.userchoice img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+    
+}
+
+.userchoice h5 {
+    margin-bottom: 12px;
+}
+
+.userchoice .profiles {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+
+.userchoice .profileinfo {
+    display: flex;
+    color: black;
+    margin-top: 10px;
+}
+
+.userchoice .overlay {
+    background-color: rgba(0, 0, 0, 0.252);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 8px;
+    align-items: end;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.userchoice .overlay button {
+    border-radius: 30px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.userchoice .overlay .saveandmore {
+    display: flex;
+}
+
+.userchoice .overlay .idiv {
+    background-color: rgb(209, 209, 209);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.userchoice .overlay .idiv i {
+    font-size: 20px;
+    font-weight: bold;
+    fill: black;
+    color: black;
+}
+
+.small img,.small .overlay{
+    grid-row-end: span 26;
+    height: 250px;
+}
+
+.medium img,.medium .overlay{
+    grid-row-end: span 33;
+    height: 300px;
+}
+
+.large img,.large .overlay{
+    grid-row-end: span 45;
+    height: 400px;
+}
+
+.create {
+    color: black;
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-top: 75px;
+}
+
+.creating {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-top: 1px solid gray;
+}
+
+.createNew {
+    background: transparent;
+    border-right: 1px solid gray;
+}
+
+.createNew .createIcons {
+    border-bottom: 1px solid gray;
+    width: 100%;
+    height: 25%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.createNew .createIcons i {
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    position: sticky;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createNew .createIcons i:hover {
+    background-color: rgb(214, 214, 214);
+}
+
+.createNew .pindrafts {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.pindraftsheader {
+    width: 90%;
+    display: flex;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pindrafts button {
+    width: 90%;
+    background-color: rgb(215, 213, 213);
+    border-radius: 22px;
+    color: black;
+}
+
+.createPin {
+    background: transparent;
+    width: 95%;
+}
+
+.createPin .header {
+    width: 100%;
+    height: 13%;
+    background: transparent;
+    padding: 30px;
+    color: black;
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+    font-weight: 500;
+    position: sticky;
+}
+
+.createPin .newPost {
+    display: flex;
+}
+
+.imageurlpost {
+    width: 45%;
+    height: 80vh;
+    background: transparent;
+    margin-left: 13%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imageurlpost .imgupload {
+    width: 100%;
+    height: 76%;
+    border-radius: 25px;
+    background-color: rgb(231, 231, 231);
+    border: 2px dashed rgb(196, 196, 196);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.imageurlpost .imgupload p {
+    color: black;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.imageurlpost .imgupload .lastp {
+    margin-bottom: 110px;
+}
+
+.imageurlpost .imgupload footer {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.imageurlpost .imgupload i {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+.saveurlbtn {
+    width: 100%;
+    margin-top: 20px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgb(213, 213, 213);
+}
+
+.saveurlbtn button {
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgb(187, 187, 187);
+    color: black;
+    font-weight: 500;
+}
+
+.facts {
+    background: transparent;
+}
+
+.facts table {
+    width: 90%;
+    background: transparent;
+}
+
+.facts table label{
+    color: rgb(171, 170, 170);
+    margin-left: 15px;
+}
+
+.facts p {
+    color: rgb(171, 170, 170);
+    margin-left: 13px;
+    margin-bottom: 1px;
+    display: block;
+}
+
+.facts table input {
+    width: 75%;
+    height: 50px;
+    border-radius: 17px;
+    border: 2px solid rgb(197, 197, 197);
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.facts table textarea {
+    width: 75%;
+    display: block;
+    height: 120px;
+    border-radius: 12px;
+    border: 2px solid rgb(197, 197, 197);
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    margin: 12px;
+    padding: 12px;
+}
+
+.facts .addproduct{
+    border-radius: 20px;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(207, 207, 207);
+    color: rgb(92, 92, 92);
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.facts .moreoptions{
+    font-size: 17px;
+    color: rgb(174, 174, 174);
+    margin-left: 20px;
+    display: flex;
+    width: 140px;
+}
+
+.facts .moreoptions i {
+    color: gray;
+    margin-left: 10px;
+}

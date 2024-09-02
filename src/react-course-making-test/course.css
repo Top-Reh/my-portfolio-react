@@ -1,0 +1,123 @@
+* {
+    color: white;
+}
+
+.containercourse {
+    width: 120%;
+    color: white;
+}
+
+body {
+    color: white;
+}
+
+button {
+    background-color: white;
+}
+
+a,Link {
+    border: none;
+}
+
+.uppertag {
+    display: flex;
+    background-color: rgb(7, 24, 70);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+p{
+    color: white;
+}
+
+.uppertag input {
+    width: 90%;
+    background-color: rgb(195, 250, 255);
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.uppertag input .inputsubmitcourse :hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.hmbtn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    width: 50%;
+    color: white;
+    background-color: white;
+}
+
+.hmbtn :hover {
+    background-color: rgb(10, 10, 10);
+    color: white;
+}
+
+.btnlink {
+    color: rgb(0, 0, 0);
+}
+
+.btnlink :hover {
+    color: white;
+}
+
+.home a {
+    border: none;
+}
+
+.homecomponent {
+    width: 100%;
+    height: auto;
+    background-color: rgb(42, 94, 250);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+}
+
+.homecomponent :hover {
+    background-color: rgb(61, 213, 255);
+    color: rgb(0, 0, 0);
+}
+
+.newjeans {
+    width: 100%;
+    background-color: rgb(64, 64, 250);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.newjeans button {
+    background-color: aliceblue;
+}
+
+.newjeans textarea {
+    width: 90%;
+    border: 2px solid rgb(254, 254, 254);
+    color: white;
+}
+
+.postcourse {
+    background-color: rgb(4, 17, 255);
+}
+
+.postcourse button {
+    background-color: red;
+    font-size: 19px;
+    font-weight: bold;
+}
