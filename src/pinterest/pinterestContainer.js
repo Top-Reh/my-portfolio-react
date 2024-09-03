@@ -7,7 +7,7 @@ import './pinterest.css'
 
 const PinterestContainer = () => {
   return (
-    <div>
+    <div className='pinterestbody'>
         <Menu/>
       <Routes>
         <Route exact path='/' element={<Home/>}/>
