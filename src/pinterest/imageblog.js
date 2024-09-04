@@ -16,7 +16,7 @@ const ImageContainer = styled.div`
 
 
 
-const Imageblog = ({imgsize}) => {
+const Imageblog = ({searchresult}) => {
     const [hoverid,sethoverid] = useState(null);
     const [isSave,setIsSave] = useState('Save');
     const [isClicked,setIsClicked] = useState(false);
