@@ -19,7 +19,13 @@ import Postst from '../react-course-making-test/posts';
 import Missing from '../react-course-making-test/missing';
 import '../react-course-making-test/course.css';
 import Blogst from '../react-course-making-test/blogs';
-import New from '../react-course-making-test/newjeans.js'
+import New from '../react-course-making-test/newjeans.js';
+import PinterestContainer from '../pinterest/pinterestContainer.js';
+import Pinhome from '../pinterest/pinhome';
+import Pincreate from '../pinterest/pincreate';
+import Pinmenu from '../pinterest/pinmenu';
+import pinterestData from '../pinterest/pinterestData';
+import Soloimageblog from '../pinterest/soloimageblog';
 
 const Myprofilio = () => {
   const [datalink, setDatalink] = useState(null);
@@ -27,6 +33,7 @@ const Myprofilio = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [searchresult,setSearchResult] = useState('');
+  const [menuData,setMenuData] = useState(pinterestData);
 
   const [blogs,setBlogs] = useState([
     {
@@ -95,6 +102,10 @@ const Myprofilio = () => {
           <Route path='/new' element={<New blogs={blogs} setBlogs={setBlogs}/>}/>
           <Route path="*" element={<Missing />} />
           <Route path="/container"  element={<Container/>}/>
+          <Route path='/PinterestContainer' element={<PinterestContainer/>}/>
+          <Route path='/Pinhome' element={<Pinhome menuData={menuData}/>}/>
+          <Route path='/Pincreate' element={<Pincreate/>}/>
+          <Route path='/Soloimageblog/:id' element={<Soloimageblog menuData={menuData}/>}/>
         </Routes>
     </div>
   )
