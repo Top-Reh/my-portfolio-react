@@ -20,6 +20,7 @@ const Profilio = () => {
         <Link to='/container'>Container</Link>
         </div>
         <div className='mydids'>
+          <Link to='/PinterestContainer'>PinterestContainer</Link>
         </div>
       </div>
       <button>View more</button>
