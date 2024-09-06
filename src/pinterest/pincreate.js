@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
+import Pinmenu from './pinmenu';
 
-const Create = () => {
+const Pincreate = ({setFirstHome,setMenuData}) => {
   const [clickedskip,setClickedskip] = useState(false);
 
   const Createnew = styled.div`
@@ -15,6 +16,7 @@ const Create = () => {
 
   return (
     <div className='create'>
+      <Pinmenu  setFirstHome={setFirstHome} setMenuData={setMenuData}/>
       <div className='creating'>
         <Createnew className='createNew' clickedskip={clickedskip}>
           
@@ -22,7 +24,7 @@ const Create = () => {
           {clickedskip ? <div className='pindrafts createIcons'>
             <div className='pindraftsheader'>
               <h5>Pin drafts</h5>
-              <i class="bi bi-chevron-double-left" onClick={skipclick} clickedskip={clickedskip}></i>
+              <i className="bi bi-chevron-double-left" onClick={skipclick} clickedskip={clickedskip}></i>
             </div>
             <button>Create new</button>
           </div> : <div className='createIcons'>
@@ -60,7 +62,7 @@ const Create = () => {
                 <p>Don't worry, people won't see your tags</p><br/>
                 <label>Tag produsts</label><br/>
                 <button className='addproduct'>Add products</button>
-                <div className='moreoptions'>More options<i class="bi bi-chevron-down"></i></div>
+                <div className='moreoptions'>More options<i className="bi bi-chevron-down"></i></div>
               </table>
             </div>
           </div>
@@ -70,4 +72,4 @@ const Create = () => {
   )
 }
 
-export default Create
+export default Pincreate
