@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 import { Route,Link,Routes } from 'react-router-dom';
-import Home from './home';
-import Create from './create';
-import Menu from './menu';
-import './pinterest.css'
+import Pinhome from './pinhome';
+import Pincreate from './pincreate';
+import Pinmenu from './pinmenu';
+import './pinterest.css';
+import pinterestData from './pinterestData';
+import Soloimageblog from './soloimageblog';
 
 const PinterestContainer = () => {
-  const [menuData,setMenuData] = useState();
+  const [menuData,setMenuData] = useState(pinterestData);
   const [firstHome,setFirstHome] = useState('');
 
   return (
     <div className='pinterestbody'>
-        <Menu setMenuData={setMenuData} setFirstHome={setFirstHome}/>
-        {firstHome==='Create' ? <h1>click the home button</h1> : <Home/>}
+        <Pinmenu setMenuData={setMenuData} setFirstHome={setFirstHome} menuData={menuData}/>
+        {firstHome==='Create' ? <Pincreate setFirstHome={setFirstHome}/> : <Pinhome menuData={menuData}/>}
       <Routes>
-        <Route exact path='/' element={<Home menuData={menuData}/>}/>
-        <Route exact path='/Create' element={<Create/>}/>
+        <Route exact path='/Pinhome' element={<Pinhome menuData={menuData} setMenuData={setMenuData} setFirstHome={setFirstHome}/>}/>
+        <Route exact path='/Pincreate' element={<Pincreate setFirstHome={setFirstHome} firstHome={firstHome} setMenuData={setMenuData} menuData={menuData}/>}/>
+        <Route path='/Soloimageblog/:id' element={<Soloimageblog  setFirstHome={setFirstHome} firstHome={firstHome} setMenuData={setMenuData} menuData={menuData}/>}/>
       </Routes>
     </div>
   )
