@@ -37,7 +37,7 @@ const Container = () => {
     function handleDelete(id) {
       const deleteBlog = blogs.filter(gg => gg.id !== id);
       setBlogs(deleteBlog);
-      navigate ('/')
+      navigate ('/container')
     }
 
     useEffect(() => {
@@ -54,16 +54,17 @@ const Container = () => {
         <input placeholder='search' value={searching} onChange={(e) => setSearching(e.target.value)}></input>
         <input type='submit' className='inputsubmitcourse'></input>
         <div className='hmbtn'>            
-            <button className='home'><Link to='/' className='btnlink'>Home</Link></button>
+            <button className='home'><Link to='/crhome' className='btnlink'>Home</Link></button>
             <button className='home'><Link to='/new' className='btnlink'>new Posts</Link></button>
         </div>
+        <Home blogs={searchresult}/>
       </div>
         <Routes>
-          <Route exact path="/" element={<Home blogs={searchresult}/>} />
-          <Route exact path="/posts" element={<Postst blogs={blogs}/>} />
-          <Route exact path="/blogs/:id" element={<Blogst blogs={blogs} setBlogs={setBlogs} setDeleted={handleDelete}/>} />
+          <Route exact path="/crhome" element={<Home blogs={searchresult}/>} />
+          <Route exact path="/postst" element={<Postst blogs={blogs}/>} />
+          <Route exact path="/blogst/:id" element={<Blogst blogs={blogs} setBlogs={setBlogs} setDeleted={handleDelete}/>} />
           <Route path='/new' element={<New blogs={blogs} setBlogs={setBlogs}/>}/>
-          <Route path="*" element={<Missing />} />
+          <Route exact path="*" element={<Missing />} />
         </Routes>
     </div>
   );
