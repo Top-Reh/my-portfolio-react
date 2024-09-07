@@ -35,26 +35,6 @@ const Myprofilio = () => {
   const [searchresult,setSearchResult] = useState('');
   const [menuData,setMenuData] = useState(pinterestData);
 
-  const [blogs,setBlogs] = useState([
-    {
-        id:0,
-        name:'First blog',
-        bio:'slkao awjioso asjfol fhwoijff'
-    },{
-        id:1,
-        name:'Second blog',
-        bio:'slkao awjioso asjfol fhwoijff'
-    },{
-        id:2,
-        name:'Third blog',
-        bio:'slkao awjioso asjfol fhwoijff'
-    },{
-        id:3,
-        name:'Fourth blog',
-        bio:'slkao awjioso asjfol fhwoijff'
-    },
-]);
-
   const navigate  = useNavigate ();
 
   useEffect(() => {
@@ -73,22 +53,19 @@ const Myprofilio = () => {
     fetchData();
   }, []);
 
-  function handleDelete(id) {
-    const deleteBlog = blogs.filter(gg => gg.id !== id);
-    setBlogs(deleteBlog);
-    navigate ('/')
-  }
-
   if (!datalink) {
     return <div>Loading...</div>;
-  }
+  };
 
   return (
     <div>
+      <button className='orghome'>
+          <span><Link to='/' className='orglink'>Home</Link></span>
+      </button>
         <Routes>
           <Route exact path="/" element={<All/>}/>
           <Route path="/about" element={<Aboutpf/>}/>
-          <Route path="/profilio" element={<Profilio/>}/>
+          <Route path="/did" element={<Profilio/>}/>
           <Route path="/contact"  element={<Contactme/>}/>
           <Route path="/dice"  element={<Dice/>}/>
           <Route path="/mainBlog"  element={<MainBlog datalink={datalink} setImageSrc={setImageSrc} setTitle={setTitle} setContent={setContent}/> }/>
@@ -96,12 +73,6 @@ const Myprofilio = () => {
           <Route path="/posts/:id" element={<Posts  datalink={datalink} setImageSrc={setImageSrc} setTitle={setTitle} setContent={setContent}/>} />
           <Route path="/blogs" element={<Blogs/>} />
           <Route path="/profiliofast" element={<Profiliofast/>} />
-          <Route exact path="/" element={<Home blogs={searchresult}/>} />
-          <Route exact path="/postst" element={<Postst blogs={blogs}/>} />
-          <Route exact path="/blogst/:id" element={<Blogst blogs={blogs} setBlogs={setBlogs} setDeleted={handleDelete}/>} />
-          <Route path='/new' element={<New blogs={blogs} setBlogs={setBlogs}/>}/>
-          <Route path="*" element={<Missing />} />
-          <Route path="/container"  element={<Container/>}/>
           <Route path='/PinterestContainer' element={<PinterestContainer/>}/>
           <Route path='/Pinhome' element={<Pinhome menuData={menuData}/>}/>
           <Route path='/Pincreate' element={<Pincreate/>}/>
