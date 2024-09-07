@@ -1,13 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    color: rgb(0, 157, 255);
 }
 
 body {
-    background-color: rgb(0, 0, 0);
-    color: rgb(0, 157, 255);
+    color: rgb(0, 0, 0);
 }
+
+
 
 html {
     scroll-snap-type: y mandatory;
@@ -19,9 +19,79 @@ section {
     scroll-snap-align: center;
 }
 
+.orglink {
+    color: white;
+    font-size: 15px;
+    border: none;
+}
+
+.orghome {
+    background: #0081c1;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+  }
+  
+  .orghome span {
+    display: inline-block;
+    transform: skew(21deg);
+  }
+  
+  .orghome::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  
+  .orghome:hover {
+    color: #fff;
+  }
+  
+  .orghome:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+
+.nightmode {
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nightmode .nighticon{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.searchandmode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .allaboutpf {
     width: 100vw;
-    background-color: black;
 }
 
 a {
@@ -52,7 +122,7 @@ button {
     position: absolute;
     background-color: rgb(255, 255, 255);
     height: 50px;
-    right: 7px;
+    right: 40px;
     border-radius: 19px;
     padding-right: 60px;
 }
@@ -91,7 +161,6 @@ button {
 
 .navbar .hoverbtn {
     margin: auto 12px;
-    background-color: blue;
     border-radius: 40%;
     z-index: 200;
 }
@@ -122,7 +191,6 @@ button {
     width: 30%;
     background: transparent;
     border-radius: 12px;
-    border: 1px solid blue;
     margin-top: 5%;
 }
 
@@ -147,7 +215,6 @@ button {
 }
 
 .about {
-    color: blue;
     font-size: 20px;
     padding: 20px;
 }
@@ -176,10 +243,8 @@ button {
 }
 
 .about p{
-    color: blue;
     font-size: 25px;
     margin: 80px 0;
-    border: 1px solid blue;
     padding:50px 0;
 }
 
@@ -206,9 +271,7 @@ button {
 }
 
 .socials p{
-    color: blue;
     font-size: 25px;
-    border: 1px solid blue;
     padding:40px 30px;
     margin-bottom: 0;
 }
@@ -216,7 +279,6 @@ button {
 .socials .line {
     width: 3px;
     height: 25%;
-    background-color: blue;
     margin-top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -224,19 +286,17 @@ button {
 
 .socials i {
     font-size: 25px;
-    color: rgb(0, 76, 255);
 }
 
 .moreaboutpf {
     width: 100%;
     height: 100vh;
-    background-color: rgb(0, 6, 12);
+    background-color: rgb(255, 255, 255);
     padding: 0 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: blue;
 }
 
 .titletextabout {
@@ -244,7 +304,6 @@ button {
     border-left: 1px solid blue;
     border-right: 1px solid blue;
     height: 40px;
-    color: blue;
     padding: 0 20px 20px 20px;
     margin-top: 0;
     width: 80%;
@@ -259,7 +318,6 @@ button {
     border-bottom: 1px solid blue;
     margin: 0;
     padding-top: 0;
-    color: blue;
     padding: 0 20px 20px 20px;
     margin-top: 0;
     width: 80%;
@@ -302,7 +360,6 @@ button {
 .skillicons {
     width: 250px;
     height: 170px;
-    color: blue;
     margin: 12px;
     overflow: hidden;
     display: flex;
@@ -310,8 +367,7 @@ button {
     justify-content: center;
 }
 
-.skillicons img {
-    
+.skillicons img {   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -351,7 +407,7 @@ button {
     justify-content: center;
     flex-direction: column;
     padding-top: 70px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .didBlogs {
@@ -372,6 +428,18 @@ button {
     margin: 12px;
 }
 
+.didlinks {
+    color: rgb(0, 72, 255);
+    text-decoration: none;
+    border: none;
+    font-size: 20px;
+    display: flex;
+
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
 .did button {
     width: 200px;
     height: 60px;
@@ -387,8 +455,37 @@ button {
     align-items: center;
     justify-content: space-evenly;
     padding-top: 70px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
+
+.contactmebtn {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+.contactmebtn:hover {
+    letter-spacing: 2px;
+    background-color: rgb(24, 191, 220);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(24, 191, 220) 0px 7px 29px 0px;
+  }
+  
+.contactmebtn:active {
+    letter-spacing: 2px;
+    background-color: hsl(24, 191, 220);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(24, 191, 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+  }
 
 .locationAndEmail {
     display: flex;
@@ -409,20 +506,17 @@ button {
 .location h2 {
     margin: 0;
     padding: 0;
-    color: rgb(0, 251, 255);
+
 }
 
 .locationAndEmail .email {
     width: 90%;
     height: 70%;
-    border: 1px solid blue;
     margin: 12px;
     border-radius: 12px;
 }
 
 .location p {
-    color: rgb(0, 213, 255);
-    border: 1px solid blue;
     padding: 30px;
     margin-top: 10px;
     border-radius: 9px;
@@ -445,13 +539,10 @@ button {
 .email input , textarea{
     width: 60%;
     border-radius: 5px;
-    border: 1px solid rgb(0, 30, 255);
     background: transparent;
-    color: rgb(0, 251, 255);
 }
 
 .email input , textarea  :active {
-    border: 1px solid blue;
 }
 
 .email textarea {
@@ -479,3 +570,216 @@ button {
     margin: 0;
     padding: 0;
 }
+
+.sendbtn {
+    --color: #560bad;
+    font-family: inherit;
+    display: inline-block;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+.sendbtn:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  
+  .sendbtn:hover {
+    color: #fff;
+    background: #3a0ca3;
+    transition: all 0s;
+  }
+  
+  .sendbtn:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+  }
+  
+  .sendbtn:hover:before {
+    top: -30px;
+    left: -30px;
+  }
+  
+  .sendbtn:active:before {
+    background: #3a0ca3;
+    transition: all 0s;
+  }
+
+  /* From Uiverse.io by erfangh2 */ 
+/* This is an example, feel free to delete this code */
+.tooltip-container {
+    --background: #333333;
+    --color: #e8e8e8;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color);
+    padding: 0.7em 1.8em;
+    border-radius: 8px;
+    text-transform: uppercase;
+    height: 30px;
+    width: 70px;
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--color);
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    transform-origin: -100%;
+    transform: scale(1);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .tooltip-container span:last-child {
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    opacity: 1;
+    background-color: var(--background);
+    z-index: -1;
+    border: 2px solid var(--background);
+    transform: scale(0);
+    transform-origin: 0;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    display: grid;
+    place-items: center;
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.3em 0.6em;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    background: var(--background);
+    z-index: -1;
+    border-radius: 8px;
+    scale: 0;
+    transform-origin: 0 0;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  }
+  
+  .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 0.6em;
+    width: 0.6em;
+    bottom: -0.2em;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    background: var(--background);
+  }
+  
+  .tooltip-container:hover .tooltip {
+    top: -100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    scale: 1;
+    animation: shake 0.5s ease-in-out both;
+  }
+  
+  .tooltip-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    color: white;
+    border-color: transparent;
+  }
+  
+  .tooltip-container:hover span:last-child {
+    transform: scale(1);
+    left: 0;
+  }
+  
+  .tooltip-container:hover .text {
+    opacity: 0;
+    top: 0%;
+    left: 100%;
+    transform: scale(0);
+  }
+  
+  @keyframes shake {
+    0% {
+      rotate: 0;
+    }
+  
+    25% {
+      rotate: 7deg;
+    }
+  
+    50% {
+      rotate: -7deg;
+    }
+  
+    75% {
+      rotate: 1deg;
+    }
+  
+    100% {
+      rotate: 0;
+    }
+  }
+
+.pinterest {
+    background-image: url('https://static-00.iconduck.com/assets.00/pinterest-icon-1024x1024-mcmp5zdy.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.numbers {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKWonXvowP6ny_GxjOX4Oi0WX1uDoGGmLtSw&s');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+.zeagwat {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGGxGCuS8MvuICeseCuxM_-aRMhpx_B1ozHw&s');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.profilefast {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTMqcCXSPd1GayrYoUaN2o4vaBaiZCOa7v7Q&s');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
