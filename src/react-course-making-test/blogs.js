@@ -10,7 +10,7 @@ const Blogst = ({ blogs, setDeleted, setBlogs }) => {
   const handleDeleteBtn = (id) => {
     const deleteBlog = blogs.filter(gg => gg.id !== id);
     setBlogs(deleteBlog);
-    navigate('/');
+    navigate('/container');
   }
 
   return (
