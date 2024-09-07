@@ -31,7 +31,7 @@ const New = ({blogs,setBlogs}) => {
       <input placeholder='type name'  onChange={setting}></input>
       <h2>Bio</h2>
       <textarea placeholder='type bio' onChange={biosetUp}></textarea>
-      <button onClick={settingTheBlog}><Link to='/'>Add</Link></button>
+      <button onClick={settingTheBlog}><Link to='/crhome'>Add</Link></button>
     </div>
   )
 }
