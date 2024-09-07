@@ -55,7 +55,7 @@ const Pinmenu = ({setMenuData,setFirstHome,menuData,firstHome}) => {
   return (
     <div >
       <div className='menu'>
-        <i className="bi bi-pinterest pincls"></i>
+        <Link to='/' className='pinlink'><i className="bi bi-pinterest pincls"></i></Link>
         <Link to='/PinterestContainer' style={{textDecoration: 'none',border: 'none',margin:'0',fontSize:'16px'}} searchresult={searchresult}><Btnhm className='homebtn' onClick={btnClickedhome} clicked={clicked}>Home</Btnhm></Link>
         <Link to='/Pincreate' style={{textDecoration: 'none',border: 'none',margin:'0',fontSize:'16px'}} ><Btncr className='createbtn' onClick={btnClickedcreat} clicked={clicked}>Create</Btncr></Link>
         <input placeholder=' Search' value={searching} onChange={(e) => setSearching(e.target.value)}></input>
