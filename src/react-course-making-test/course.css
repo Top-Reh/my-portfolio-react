@@ -2,13 +2,19 @@
     color: white;
 }
 
-.containercourse {
-    width: 120%;
-    color: white;
-}
-
 body {
     color: white;
+    background-color: rgb(168, 168, 168);
+    width: 100vw;
+}
+
+.containercourse {
+    width: 40vw;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 button {
@@ -68,7 +74,7 @@ p{
 }
 
 .btnlink :hover {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .home a {
@@ -78,13 +84,13 @@ p{
 .homecomponent {
     width: 100%;
     height: auto;
-    background-color: rgb(42, 94, 250);
+    background-color: rgb(121, 154, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .homecomponent :hover {
@@ -100,6 +106,7 @@ p{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    color: rgb(0, 0, 0);
 }
 
 .newjeans button {
