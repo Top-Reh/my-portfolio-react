@@ -8,6 +8,11 @@ import Aboutpf from './aboutpf';
 import Profilio from './profilio';
 import Contactme from './contactme';
 
+const Dkbtn = styled.div`
+  color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+  transition:1s;
+`;
+
 const expand = keyframes `
     from {
       width:0;
@@ -31,20 +36,20 @@ const expand = keyframes `
   `
 
   const Thelink = styled.a `
-    color: rgb(97, 200, 255);
+    color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
     font-size: 25px;
     text-decoration: none;
     margin: 20px;
     padding: 5px;
-    border-bottom: 2px solid rgb(0, 153, 255);
+    border-bottom: 2px solid ${({darkmode}) => (darkmode ? 'blue' : 'black')};
     cursor: pointer;
-    transition: 2s;
+
   `;
 
   const Searchbtn = styled.button`
     margin-left: 0;
-    margin-right: 20px;
-    background-color: blue;
+    margin-right: 2px;
+    background-color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
     border-radius: 40%;
   `;
 
@@ -56,11 +61,12 @@ const expand = keyframes `
     transition: width 2s ease , opacity 2s ease;
     pointer-events: ${({ searching }) => (searching ? 'auto' : 'none')};
     animation: ${({ searching }) => (searching ? expand : collapse)} 0.5s forwards;
+    color:black;
   `;
 
   const InputIcon = styled.div`
     position: absolute;
-    right: 40px;
+    right: 70px;
     color: black;
     font-size: 24px;
     cursor: pointer;
@@ -74,18 +80,18 @@ const expand = keyframes `
     overflow: hidden;
     transform: ${({hiclicked}) => (hiclicked ? 'rotate(180deg)' : 'rotate(0deg)')};
     transition:all 0.5s ease-in-out;
+    background-color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
   `;
 
   const Hividbtn = styled.div`
    width: ${({hiclicked}) => (hiclicked ? '210px' : '0')};
    transition:all 0.5s ease-in-out;
-  `
+  `;
 
   const variants = {
     initial: {
       x:-500,
       y:0,
-      opacity:0,
     },
     animate: {
       x:0,
@@ -97,14 +103,19 @@ const expand = keyframes `
       },
     },
   };
+
+  const Menuline = styled(motion.div)`
+    background-color: ${({darkmode}) => (darkmode ? 'white' : 'black')};
+  `;
   
 
 const All = () => {
 
   const [searching,setSearching] = useState(false);
   const [inputValue,setInputValue] = useState('');
-  const [links,setLinks] = useState(['info','about','profilio','contant']);
+  const [links,setLinks] = useState(['info','about','did','contact']);
   const [hiclicked,setHiclicked] = useState(false);
+  const [darkmode,setDarkmode] = useState(false);
   const ref = useRef();
   
 
@@ -154,43 +165,45 @@ const All = () => {
     setTimeout(() => {
       setHiclicked(pre => !pre);
     }, 3000);
-  }
+  };
+
+  useEffect(() => {
+    document.body.classList.toggle('darkmode', darkmode);
+    document.body.classList.toggle('lightmode', !darkmode);
+  }, [darkmode]);
 
   return (
     <motion.div ref={ref} >
         <div className='navbar'>
-            <Hibtn className='hoverbtn ' onClick={hiclickedfun} hiclicked={hiclicked}>
-              {hiclicked ? <i class="bi bi-arrow-left"></i> : 'HI'}
-            </Hibtn>
-            <Hividbtn className='hivid' hiclicked={hiclicked}>
-              <h4>Welcome</h4>
-              <motion.img 
-                src="https://media.giphy.com/media/AWNxDbtHGIJDW/giphy.gif?cid=ecf05e4795ui617yr3qdgnvb5h3i3kqm9f7b3z98pna2vviz&ep=v1_gifs_search&rid=giphy.gif&ct=g" 
-                alt="Funny GIF"
-                initial={{opacity:0}}
-                whileInView={{opacity:1}}
-                transition={{duration:0.5}}
-              />
-              </Hividbtn>
-            <div >
-                <Thelink href="#info" key='info' onClick={scrolltodiv}>Info</Thelink>
-                <Thelink href="#about" key='about' onClick={scrolltodiv}>About</Thelink>
-                <Thelink href="#profilio" key='profilio' onClick={scrolltodiv}>Profilio</Thelink>
-                <Thelink href="#contant"  key='contact' onClick={scrolltodiv}>Contant</Thelink>
+            <div class="tooltip-container">
+              <span class="tooltip">👋</span>
+              <span class="text">Hello!</span>
+              <span>TOP</span>
             </div>
-            <Searchbtn  searching={searching} onClick={search}><i class="bi bi-search"></i></Searchbtn>
-            <SearchInput searching={searching} className='searching' value={inputValue} onChange={inputValuechange} onKeyDown={searchthelink}></SearchInput>
-            <InputIcon searching={searching} >
-              <i class="bi bi-search inputiconsearch" onClick={searchthelink} ></i>
-            </InputIcon>
-            <motion.div style={{scaleX}} className='menuunderline'>
+            <div >
+                <Thelink href="#info" key='info' onClick={scrolltodiv} darkmode={darkmode}>Info</Thelink>
+                <Thelink href="#about" key='about' onClick={scrolltodiv} darkmode={darkmode}>About</Thelink>
+                <Thelink href="#did" key='did' onClick={scrolltodiv} darkmode={darkmode}>Did</Thelink>
+                <Thelink href="#contact"  key='contact' onClick={scrolltodiv} darkmode={darkmode}>Contact</Thelink>
+            </div>
+            <div className='searchandmode'>
+              <Searchbtn  searching={searching} onClick={search} darkmode={darkmode}><i class="bi bi-search"></i></Searchbtn>
+              <SearchInput searching={searching} className='searching' value={inputValue} onChange={inputValuechange} onKeyDown={searchthelink}></SearchInput>
+              <InputIcon searching={searching} >
+                <i class="bi bi-search inputiconsearch" onClick={searchthelink} ></i>
+              </InputIcon>
+              <Dkbtn className='nightmode' onClick={() => setDarkmode(pre => !pre)} darkmode={darkmode}>
+                {darkmode ? <i className="bi bi-moon nighticon"></i> : <i className="bi bi-brightness-high nighticon"></i>}
+              </Dkbtn>
+            </div>
+            <Menuline style={{scaleX}} className='menuunderline' darkmode={darkmode}>
 
-            </motion.div>
+            </Menuline>
         </div>
-      <motion.section id='info' variants={variants} initial='initial' whileInView="animate" ><AllAboutpf /></motion.section>
-      <motion.section id='about' variants={variants} initial='initial' whileInView="animate" ><Aboutpf/></motion.section>
-      <motion.section id='profilio' variants={variants} initial='initial' whileInView="animate" ><Profilio/></motion.section>
-      <motion.section id='contant' variants={variants} initial='initial' whileInView="animate" ><Contactme/></motion.section>
+      <motion.section id='info' variants={variants} initial='initial' whileInView="animate" ><AllAboutpf darkmode={darkmode}/></motion.section>
+      <motion.section id='about' variants={variants} initial='initial' whileInView="animate" ><Aboutpf darkmode={darkmode}/></motion.section>
+      <motion.section id='did' variants={variants} initial='initial' whileInView="animate" ><Profilio darkmode={darkmode}/></motion.section>
+      <motion.section id='contact' variants={variants} initial='initial' whileInView="animate" ><Contactme darkmode={darkmode}/></motion.section>
     </motion.div>
   )
 }
