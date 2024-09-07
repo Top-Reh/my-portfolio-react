@@ -1,25 +1,46 @@
-import React from 'react';
+import React,{useState} from 'react';
+import styled from 'styled-components';
 
-const Aboutpf = () => {
+const Aboutpf = ({darkmode}) => {
+
+  const About = styled.div `
+    background-color: ${({darkmode}) => (darkmode ? 'rgb(0, 37, 61)' : 'rgb(106, 195, 255)')};
+    color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+  `;
+
+  const Aboutcolor = styled.div`
+    color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+  `;
+
+  const Aboutfacts = styled.div`
+    color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+    border-color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+  `;
+
+  const Pfp = styled.p`
+    color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+    border-color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+  `;
+
   return (
-    <div className='moreaboutpf'>
-      <div className='myabout aboutin'>
-        <div className='titilebeauty'>
+    <About className='moreaboutpf' darkmode={darkmode}>
+      <Aboutcolor className='myabout aboutin' darkmode={darkmode}>
+        <Aboutcolor className='titilebeauty' darkmode={darkmode}>
           <h1>About</h1>
-          <p className='titletextabout'>
-          </p>
-        </div>
-        <p className='textabout'>
-          Hi, I'm Top and I'm trying to become a front-end developer.I'm just 19 years old but I study programming since last two years.It became my dream job and it also become my hobby because I like coding infront of laptop all day in house so I chose to become developer.My childhood hobby is drawing so I love creating and designing so I chose frontend.One reason I want to get job is I wnat to get coding experiences with teammate.
-        </p>
-      </div>
-      <div className='myskills aboutin'>
-        <div className='titilebeauty'>
+          <Pfp className='titletextabout' darkmode={darkmode}>
+          </Pfp>
+        </Aboutcolor>
+        <Pfp className='textabout' darkmode={darkmode}>
+          Hi, I'm Top, a passionate aspiring front-end developer. At 19, I've been studying programming for the past two years, and it’s quickly become both my dream career and a hobby I enjoy daily. My love for creating and designing stems from my childhood interest in drawing, which naturally led me to front-end development, where I can combine creativity with coding. I'm eager to join a team where I can expand my skills, gain valuable experience, and contribute to meaningful projects.
+        </Pfp>
+      </Aboutcolor>
+      <Aboutcolor className='myskills aboutin' darkmode={darkmode}>
+        <Aboutfacts className='titilebeauty' darkmode={darkmode}>
           <h1>Skills</h1>
-          <p className='titletextabout'>
-          </p>
-        </div>
-        <div className='textabout skilldiv'>
+          <Pfp className='titletextabout' darkmode={darkmode}>
+          </Pfp>
+        </Aboutfacts>
+        <Aboutfacts className='textabout skilldiv' darkmode={darkmode}>
           <div className='skillicons '>
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="200" height="200" viewBox="0 0 48 48">
               <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path><path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path>
@@ -40,9 +61,9 @@ const Aboutpf = () => {
               <path fill="#80deea" d="M24,34C11.1,34,1,29.6,1,24c0-5.6,10.1-10,23-10c12.9,0,23,4.4,23,10C47,29.6,36.9,34,24,34z M24,16	c-12.6,0-21,4.1-21,8c0,3.9,8.4,8,21,8s21-4.1,21-8C45,20.1,36.6,16,24,16z"></path><path fill="#80deea" d="M15.1,44.6c-1,0-1.8-0.2-2.6-0.7C7.6,41.1,8.9,30.2,15.3,19l0,0c3-5.2,6.7-9.6,10.3-12.4c3.9-3,7.4-3.9,9.8-2.5	c2.5,1.4,3.4,4.9,2.8,9.8c-0.6,4.6-2.6,10-5.6,15.2c-3,5.2-6.7,9.6-10.3,12.4C19.7,43.5,17.2,44.6,15.1,44.6z M32.9,5.4	c-1.6,0-3.7,0.9-6,2.7c-3.4,2.7-6.9,6.9-9.8,11.9l0,0c-6.3,10.9-6.9,20.3-3.6,22.2c1.7,1,4.5,0.1,7.6-2.3c3.4-2.7,6.9-6.9,9.8-11.9	c2.9-5,4.8-10.1,5.4-14.4c0.5-4-0.1-6.8-1.8-7.8C34,5.6,33.5,5.4,32.9,5.4z"></path><path fill="#80deea" d="M33,44.6c-5,0-12.2-6.1-17.6-15.6C8.9,17.8,7.6,6.9,12.5,4.1l0,0C17.4,1.3,26.2,7.8,32.7,19	c3,5.2,5,10.6,5.6,15.2c0.7,4.9-0.3,8.3-2.8,9.8C34.7,44.4,33.9,44.6,33,44.6z M13.5,5.8c-3.3,1.9-2.7,11.3,3.6,22.2	c6.3,10.9,14.1,16.1,17.4,14.2c1.7-1,2.3-3.8,1.8-7.8c-0.6-4.3-2.5-9.4-5.4-14.4C24.6,9.1,16.8,3.9,13.5,5.8L13.5,5.8z"></path><circle cx="24" cy="24" r="4" fill="#80deea"></circle>
             </svg>
           </div>
-        </div>
-      </div>
-    </div>
+        </Aboutfacts>
+      </Aboutcolor>
+    </About>
   )
 }
 
