@@ -23,7 +23,7 @@ const Home = ({blogs}) => {
   return (
     <div className='homecomponent '>
       {blogs.length > 0 ? (blogs.map(post => (
-        <Link key={post.id} name={post.id} to={`/blogs/${post.id}`} className='postlink'><Postst key={post.id} post={post} id={post.id}/></Link>
+        <Link key={post.id} name={post.id} to={`/blogst/${post.id}`} className='postlink'><Postst key={post.id} post={post} id={post.id}/></Link>
       ))) : <h1>No post is ariviable</h1>}
     </div>
   )
