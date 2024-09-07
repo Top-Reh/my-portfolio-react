@@ -4,12 +4,37 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { motion , useScroll,useSpring} from 'framer-motion';
 import styled from 'styled-components';
 
-
-const AllAboutpf = () => {
-
-  const Contactme = styled.button `
-
+const All = styled.div `
+    background-color: ${({darkmode}) => (darkmode ? 'rgb(0, 37, 61)' : 'rgb(106, 195, 255)')};
+    color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
   `;
+
+  const Allprofile = styled.div`
+    color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+    border: 1px solid ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+  `;
+
+  const Pfp = styled.p`
+    color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+    border: 1px solid ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+  `;
+
+  const Hoverbtn = styled.button`
+    background-color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+    color: ${({darkmode}) => (darkmode ? 'white' : 'white')};
+  `;
+
+  const Line = styled.div`
+    background-color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+  `;
+
+  const Socials = styled.i`
+     color: ${({darkmode}) => (darkmode ? 'blue' : 'black')};
+  `;
+
+
+const AllAboutpf = ({darkmode}) => {
+  
 
   function scrollcontant(e) {
     e.preventDefault();
@@ -31,34 +56,34 @@ const AllAboutpf = () => {
   }
 
   return (
-    <div className='allaboutpf' >
-        <div className='profiliobody'>
-          <div className='about profiliodiv'>
+    <All className='allaboutpf' darkmode={darkmode}>
+        <Allprofile className='profiliobody' darkmode={darkmode}>
+          <Allprofile className='about profiliodiv' darkmode={darkmode}>
             <h2>Top Reh's info</h2>
-            <p>Junior front-end web developer</p>
+            <Pfp darkmode={darkmode}>front-end web developer</Pfp>
             <div className='btncontact'>
                   
               <a href="#contant"  key='contant' onClick={scrollcontants}>
-                <button className='hoverbtn'>Contact me</button>
+                <Hoverbtn className='hoverbtn contactmebtn' darkmode={darkmode}>Contact me</Hoverbtn>
               </a>
               
             </div>
-          </div>
+          </Allprofile>
           <div className='myPhoto profiliodiv'>
             <img src='https://i.pinimg.com/564x/c7/b1/52/c7b152f8237968ee43cb382e20b72312.jpg'></img>
           </div>
-          <div className='socials '>
-            <p>
+          <Allprofile className='socials ' darkmode={darkmode}>
+            <Pfp darkmode={darkmode}>
               You can contact here
-            </p>
-            <div className='line'></div> 
-            <a href='https://www.facebook.com/profile.php?id=100070858609953&mibextid=ZbWKwL' className='socialicons'><i class="bi bi-facebook"></i></a>
-            <a href='' className='socialicons'><i class="bi bi-instagram"></i></a>
-            <a href='' className='socialicons'><i class="bi bi-youtube"></i></a>
-            <a href='' className='socialicons'><i class="bi bi-twitter"></i></a>
-          </div>
-        </div>
-    </div>
+            </Pfp>
+            <Line className='line' darkmode={darkmode}></Line> 
+            <a href='' className='socialicons'><Socials className="bi bi-facebook" darkmode={darkmode}></Socials></a>
+            <a href='' className='socialicons'><Socials className="bi bi-instagram" darkmode={darkmode}></Socials></a>
+            <a href='' className='socialicons'><Socials className="bi bi-youtube" darkmode={darkmode}></Socials></a>
+            <a href='' className='socialicons'><Socials className="bi bi-twitter" darkmode={darkmode}></Socials></a>
+          </Allprofile>
+        </Allprofile>
+    </All>
   )
 }
 
