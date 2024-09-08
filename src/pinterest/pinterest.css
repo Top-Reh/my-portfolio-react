@@ -603,3 +603,9 @@ body {
     right: 50px;
     font-size: 25px;
 }
+
+.solosave {
+    width: 60px;
+    height: 40px;
+    border: none;
+}
