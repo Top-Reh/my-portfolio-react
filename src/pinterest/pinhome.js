@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import pinterestData from './pinterestData';
-import Imageblog from './imageblog';
+import Pinimageblog from './pinimageblog';
 
-const Home = ({menuData}) => {
+const Pinhome = ({menuData}) => {
   
 
   return (
     <div className='home'> 
       <div className='homeblogs'>
-        <Imageblog searchresult={menuData}/>
+        <Pinimageblog menuData={menuData}/>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default Pinhome;
