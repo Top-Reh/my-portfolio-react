@@ -63,7 +63,7 @@ const AllAboutpf = ({darkmode}) => {
             <Pfp darkmode={darkmode}>front-end web developer</Pfp>
             <div className='btncontact'>
                   
-              <a href="#contant"  key='contant' onClick={scrollcontants}>
+              <a href="#contact"  key='contant' onClick={scrollcontants}>
                 <Hoverbtn className='hoverbtn contactmebtn' darkmode={darkmode}>Contact me</Hoverbtn>
               </a>
               
