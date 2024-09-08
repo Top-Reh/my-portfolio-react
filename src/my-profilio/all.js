@@ -187,7 +187,7 @@ const All = () => {
                 <Thelink href="#contact"  key='contact' onClick={scrolltodiv} darkmode={darkmode}>Contact</Thelink>
             </div>
             <div className='searchandmode'>
-              <Searchbtn  searching={searching} onClick={search} darkmode={darkmode}><i class="bi bi-search"></i></Searchbtn>
+              <Searchbtn  searching={searching} onClick={search} darkmode={darkmode} className='searchicon'><i className="bi bi-search "></i></Searchbtn>
               <SearchInput searching={searching} className='searching' value={inputValue} onChange={inputValuechange} onKeyDown={searchthelink}></SearchInput>
               <InputIcon searching={searching} >
                 <i class="bi bi-search inputiconsearch" onClick={searchthelink} ></i>
